@@ -131,10 +131,17 @@
 
 			function render() {
 				camera.position.x += ( mouseX - camera.position.x ) * .05;
+				camera.position.y += ( mouseY - camera.position.y ) * .05;
 				if (camera.position.x < -40) {
 					camera.position.x = -40;
 				} else if (camera.position.x > 40) {
 					camera.position.x = 40;
+				}
+
+				if (camera.position.y < -40) {
+					camera.position.y = -40;
+				} else if (camera.position.y > 40) {
+					camera.position.y = 40;
 				}
 
 				camera.lookAt( scene.position );
